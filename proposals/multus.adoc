@@ -1,0 +1,84 @@
+== Multus CNI
+
+*Name of project*: Multus CNI
+
+*Description*:
+
+Multus CNI is a container network interface (CNI) plugin for Kubernetes that enables attaching multiple network interfaces to pods. Typically, in Kubernetes each pod only has one network interface (apart from a loopback) -- with Multus you can create a multi-homed pod that has multiple interfaces. This is accomplished by Multus acting as a "meta-plugin", a CNI plugin that can call multiple other CNI plugins.
+
+Multus CNI follows the https://docs.google.com/document/d/1Ny03h6IDVy_e_vmElOqR7UdTPAG_RNydhVE1Kx54kFQ/edit[Kubernetes Network Custom Resource Definition De-facto Standard] to provide a standardized method by which to specify the configurations for additional network interfaces. This standard is put forward by the Kubernetes https://github.com/K8sNetworkPlumbingWG/community[Network Plumbing Working Group].
+
+*Sponsor / Advisor from TOC*: (none yet)
+
+*Unique Identifier*: multus-cni
+
+*License*: ALv2
+
+*Maturity Level*: Sandbox
+
+*Source control repositories*: https://github.com/intel/multus-cni (we would like to change this)
+
+*Initial Committers*:
+
+- rkamudhan
+- s1061123
+- dougbtv
+
+*Infrastructure requirements*: CI, CNCF Cluster, TravisCI
+
+*Issue tracker*: https://github.com/intel/multus-cni/issues
+
+*Mailing lists*
+
+* https://intel-corp-team.slack.com[Multus CNI Slack]
+
+*Website*: https://multus-cni.io
+
+*Community*: A welcoming and active community, and tight integration with the Network Plumbing Working Group
+
+* 688 GitHub stars
+* 38 contributors
+
+*Release methodology and mechanics*
+
+Code review on all changes. Releases triggered manually by developer team.
+
+*Social media accounts*:
+
+(none currently)
+
+*Existing sponsorship*:
+
+* Red Hat (lead)
+* Intel
+
+*Adopters*:
+
+* Red Hat - Default CNI plugin used in OpenShift as of OCP 4.1
+* Intel
+
+*Statement on alignment with CNCF mission*:
+
+The mission of Multus CNI is simply to provide a method to attach pods to multiple networks in Kubernetes to enable advanced networking situations within Kubernetes without having to modify core Kubernetes, and to respect the power that CNI gives Kubernetes to offload intelligence about networking to out-of-tree solutions. Multus is built as a reference to the de-facto specification put forward by the Network Plumbing Working Group and is built with a community minded approach and with respect to the Kubernetes community and to the CNCF mission.
+
+*Contributors*: https://github.com/intel/multus-cni/graphs/contributors
+
+*External Dependencies*: Full list: https://github.com/intel/multus-cni/blob/master/glide.yaml
+
+At the time of authoring, by LICENSE contains:
+
+* ALv2
+  - github.com/containernetworking/cni
+  - github.com/containernetworking/plugins
+  - github.com/golang/glog
+  - github.com/vishvananda/netlink
+  - k8s.io/apimachinery
+  - k8s.io/api
+  - k8s.io/client-go
+  - k8s.io/kubernetes
+  - github.com/vishvananda/netns
+* BSD-2
+  - github.com/pkg/errors
+* MIT
+  - github.com/onsi/ginkgo
+  - github.com/onsi/gomega
